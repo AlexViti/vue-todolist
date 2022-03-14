@@ -1,3 +1,10 @@
+class Todo {
+	constructor(task) {
+		this.task = task;
+		this.done = false;
+	}
+}
+
 const app = new Vue({
 	el: '#root',
 	data: {
@@ -15,10 +22,7 @@ const app = new Vue({
 				done: false
 			}
 		],
-		newTodo: {
-			task: '',
-			done: false
-		}
+		newTodo: ''
 	},
 	methods: {
 		deleteTodo(index) {
@@ -26,8 +30,8 @@ const app = new Vue({
 		},
 		addTodo() {
 			if (this.newTodo.trim() != '') {
-				this.todoArr.unshift(this.newTodo.task.trim());
-				this.newTodo.task = ''
+				this.todoArr.unshift(new Todo(this.newTodo.trim()));
+				this.newTodo = '';
 			}
 		}
 	}
