@@ -45,6 +45,10 @@
 	cursor: pointer;
 }
 
+.todo-item div {
+	flex-grow: 1;
+}
+
 .btn-delete {
 	padding: .5em;
 	background-color: transparent;
