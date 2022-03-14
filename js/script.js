@@ -31,8 +31,8 @@ const app = new Vue({
 		addTodo() {
 			if (this.newTodo.trim() != '') {
 				this.todoArr.unshift(new Todo(this.newTodo.trim()));
-				this.newTodo = '';
 			}
+			this.newTodo = '';
 		}
 	}
 });
