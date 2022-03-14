@@ -18,8 +18,8 @@
 			<button @click="addTodo" class="add-btn">Aggiungi</button>
 		</div>
 		<ul class="todo-list">
-			<li v-for="(element, index) in todoArr" class="todo-item">
-				<div>{{ element.task }}</div>
+			<li @click="doneToggle(element)" v-for="(element, index) in todoArr" class="todo-item">
+				<div :class="element.done ? 'done': ''">{{ element.task }}</div>
 				<button @click="deleteTodo(index)" class="btn-delete">X</button>
 			</li>
 		</ul>

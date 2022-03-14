@@ -33,6 +33,7 @@ const app = new Vue({
 				this.todoArr.unshift(new Todo(this.newTodo.trim()));
 			}
 			this.newTodo = '';
-		}
+		},
+		doneToggle: (toDo) => toDo.done = !toDo.done
 	}
 });
