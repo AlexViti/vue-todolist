@@ -11,18 +11,20 @@
 }
 
 .add-todo {
-	margin: 0 auto 1rem;
+	margin: 0 auto 2rem;
+	display: flex;
+	max-width: 300px;
 }
 
 .add-todo input {
 	border-radius: 8px;
 	border: 1px solid black;
 	padding: .5em;
-	max-width: 300px;
+	margin-right: 1rem;
 }
 
 .add-todo button {
-	padding: .5em;
+	padding: .5em 1.5em;
 	border-radius: 8px;
 }
 
